@@ -1,0 +1,11 @@
+<div class="sidebar">
+    {% if image %}
+        <img src="{{ image }}" alt="{{ title }}">
+    {% endif %}
+        {% if title %}
+        <p>{{ title }}</p>
+    {% endif %}
+    {% for link in links %}
+        <a href="{{ link.url }}">{{ link.label }}</a>
+    {% endfor %}
+</div>

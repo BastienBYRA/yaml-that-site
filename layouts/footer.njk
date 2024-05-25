@@ -1,0 +1,7 @@
+<footer>
+    <div class="footer-links">
+        {% for link in links %}
+            <a href="{{ link.url }}">{{ link.label }}</a>
+        {% endfor %}
+    </div>
+</footer>

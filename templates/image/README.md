@@ -1,0 +1,1 @@
+Cette page à pour but de n'afficher qu'une ou plusieurs image à la suite
