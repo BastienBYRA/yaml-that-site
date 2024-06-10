@@ -2,13 +2,24 @@
   "name": "yaml-that-site",
   "version": "1.0.0",
   "description": "A program with the goal of creating a website based on a YAML file configuration",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp",
+    "build": "gulp build"
   },
   "author": "Bastien BYRA",
-  "license": "MIT License"
+  "license": "MIT License",
+  "dependencies": {
+    "del": "^7.1.0",
+    "gulp-beautify": "^3.0.0",
+    "nunjucks": "^3.2.4"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-nunjucks-render": "^2.2.3"
+  }
 }
