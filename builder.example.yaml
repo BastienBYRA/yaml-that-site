@@ -1,4 +1,10 @@
 structure:
+
+  global:
+    style: classic
+    css_file:
+    javascript_file:
+
   layout:
     header:
       - title: Home
@@ -30,5 +36,3 @@ structure:
             This is the about page of our site. We hope you enjoy your stay.
             Alors
           content_file: about.txt # or about.md or about.html
-
-  style: classic

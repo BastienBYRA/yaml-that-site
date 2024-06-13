@@ -2,7 +2,7 @@
   "name": "yaml-that-site",
   "version": "1.0.0",
   "description": "A program with the goal of creating a website based on a YAML file configuration",
-  "main": "gulpfile.js",
+  "main": "index.js",
   "type": "module",
   "directories": {
     "doc": "docs"
@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp",
     "build": "gulp build",
-    "temp": "node gulpfile.js --temp aaa"
+    "temp": "node index.js --to-zip"
   },
   "author": "Bastien BYRA",
   "license": "MIT License",
