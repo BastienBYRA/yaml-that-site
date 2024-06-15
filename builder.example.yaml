@@ -1,38 +1,44 @@
-structure:
+default:
+  style: classic
+  css_file:
+  javascript_file:
 
-  global:
-    style: classic
-    css_file:
-    javascript_file:
-
-  layout:
-    header:
+layout:
+  header:
+    fixed: true
+    css_file: header.css
+    links:
       - title: Home
         path: /
       - title: About
         path: /about
-    footer:
+  footer:
+    css_file: footer.css
+    links:
       - title: Home
         path: /
       - title: About
         path: /about
 
-  pages:
-    - title: Home
-      path: /
-      template:
-        homepage-1:
-          title: Welcome to our site
-          image: /images/home.jpg
-          content: |
-            This is the home page of our site. We hope you enjoy your stay.
-            Alors
-    - title: About
-      path: /about
-      template:
-        about:
-          title: About us
-          content: |
-            This is the about page of our site. We hope you enjoy your stay.
-            Alors
-          content_file: about.txt # or about.md or about.html
+pages:
+  - title: Home
+    path: /
+    template:
+      homepage1:
+        title: Welcome to our site
+        image: /images/home.jpg
+        content: |
+          This is the home page of our site. We hope you enjoy your stay.
+          Alors
+        content_file: home.txt # or home.md or home.html
+        css_file: style.css
+        javascript_file: script.js
+
+  - title: About
+    path: /about
+    template:
+      about:
+        title: About us
+        content: |
+          This is the about page of our site. We hope you enjoy your stay.
+          Alors

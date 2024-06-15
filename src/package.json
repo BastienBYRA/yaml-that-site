@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp",
     "build": "gulp build",
-    "temp": "node index.js --to-zip"
+    "temp": "node index.js"
   },
   "author": "Bastien BYRA",
   "license": "MIT License",

@@ -2,20 +2,26 @@ import fs from 'fs';
 import minimist from 'minimist';
 import { exit } from 'process';
 import { Arguments } from '../class/Arguments.js';
+import yaml from 'js-yaml';
 
 export const readArguments = () => {
     
     let argumentList = new Arguments(false, false, null, false, false);
 
     const argv = minimist(process.argv.slice(2));
+
+    console.log(argv)
+
     if(argv['structure-file'] && typeof argv['structure-file'] === 'string' && argv['structure-file'].trim() !== '') {
 
         // Get file extension
         const fileExtension = argv['structure-file'].split('.').pop();
         if (fileExtension == "yml" || fileExtension == "yaml") {
-            argumentList.structureFile = convertYamlToJson(argv['structure-file']);
+            argumentList.structureFile = yaml.load(fs.readFileSync("../" + argv['structure-file'], 'utf8'));
         } else if (fileExtension == "json") {
             argumentList.structureFile = argv['structure-file'];
+            console.log("TODO")
+            exit(1)
         } else {
             console.log('File provided is not a YAML or JSON file !');
             exit(1);
