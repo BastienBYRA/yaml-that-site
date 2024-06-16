@@ -10,11 +10,6 @@ import { validateStructure } from './validators/validateStructure.js';
 function main() {
     const argumentList = readArguments();
     validateStructure(argumentList.structureFile);
-    
-    //Function to check if the structureFile variable in the argumentList has the correct value in it
 }
 
-
-// export const build = series(html);
-// export const defaultTask = series(html, watchFiles);
 main();

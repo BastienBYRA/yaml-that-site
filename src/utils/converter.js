@@ -11,6 +11,15 @@ const populateHomepage1 = (homepage1) => {}
 const populateHomepage2 = (homepage2) => {}
 const populateAbout = (about) => {}
 
+const markdownToHTML = (data) => {
+    //TODO
+    return data;
+}
+
+const textToHTML = (data) => {
+    return "<p>" + data + "</p>";
+}
+
 
 async function html(path, data) {
     // return src('layouts/*.+(html|njk)')
@@ -28,6 +37,9 @@ async function html(path, data) {
         .pipe(dest('build'))
 }
 
-function watchFiles() {
-    watch('src/html/**/*', html)
-}
+// function watchFiles() {
+//     watch('src/html/**/*', html)
+// }
+
+// export const build = series(html);
+// export const defaultTask = series(html, watchFiles);

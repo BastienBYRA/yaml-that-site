@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{global.language}}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <style>
-        /* Add your custom CSS styles here */
-    </style>
+    <title>{{pages.template.homepage1.title}}</title>
 </head>
 <body>
     <h1 class="center-title">{{pages.template.homepage1.title}}</h1>
     <img class="banner" src="{{pages.template.homepage1.image}}" alt="{{pages.template.homepage1.altImage}}">
-    <p class="content">{{pages.template.homepage1.content}}</p>
+    {# <p class="content">{{pages.template.homepage1.content}}</p> #}
+    {{pages.template.homepage1.content}}
+
+    {# Si fichier .html, n'ajoute rien
+    Si fichier .txt => Ajoute un <p></p>
+    Si .md => Converti en HTML #}
 </body>
 </html>
