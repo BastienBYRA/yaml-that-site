@@ -21,24 +21,55 @@
 #         path: /about
 
 pages:
-  - title: Home
-    path: /
-    template:
-      homepage1:
-        title: Welcome to our site
-        image: /images/home.jpg
-        content: |
-          This is the home page of our site. We hope you enjoy your stay.
-          Alors
-        # content_file: home.txt # or home.md or home.html
-        # css_file: style.css
-        # javascript_file: script.js
+  # - title: Home
+  #   path: /
+  #   template:
+  #     homepage1:
+  #       title: Welcome to our site
+  #       image: /images/home.jpg
+  #       content: |
+  #         This is the home page of our site. We hope you enjoy your stay.
+  #         Alors
+  #       # content_file: home.txt # or home.md or home.html
+  #       # css_file: style.css
+  #       # javascript_file: script.js
 
-  # - title: About
-  #   path: /about
+  - title: CV
+    path: /cv
+    template:
+      cv:
+        title: My CV
+        image: my-face.png
+        alt_text_image: My face
+        social_networks:
+          - title: LinkedIn
+            image: linkedin.png
+            link: https://www.linkedin.com/in/your-linkedin
+        content_bloc:
+          - title: Experience
+            content: |
+              This is the experience section of my CV.
+          - title: Education
+            content: |
+              This is the education section of my CV.
+
+
+  # - title: Documentation
+  #   path: /docs
   #   template:
   #     about:
-  #       title: About us
+  #       title: Documentation
   #       content: |
-  #         This is the about page of our site. We hope you enjoy your stay.
-  #         Alors
+  #         This is the documentation page of our site. We hope you find what you are looking for.
+  #       documentation_content_folder: /docs
+  #       orderBy: name | date | filename
+
+  # - title: Gallery
+  #   path: /gallery
+  #   template:
+  #     gallery:
+  #       title: Gallery
+  #       content: |
+  #         This is the gallery page of our site. We hope you enjoy the photos.
+  #       gallery_folder: /images/gallery
+  #       orderBy: name | date | filename

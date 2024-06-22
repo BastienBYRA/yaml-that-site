@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{template.cv.title}}</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>{{title}}</h1>
+    <h1>{{template.cv.title}}</h1>
+    <div>
+        <img src="{{template.cv.image}}" alt="{{template.cv.alt_text_image}}">
+    </div>
+    
+    {% if template.cv.social_networks %}
+        <div>
+            <h2>Social networks</h2>
+            {% for item in template.cv.social_networks %}
+                <div>
+                    <p>{{item.name}}</p>
+                    <img src="{{item.image}}" alt="{{item.alt_text_image}}">
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    
+    {% if template.cv.content_bloc %}
+    {% for item in template.cv.content_bloc %}
+        <div>
+            <h2>{{item.title}}</h2>
+            <p>{{item.content}}</p>
+        </div>
+    {% endfor %}
+    {% endif %}
+</body>
+</html>
